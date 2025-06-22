@@ -1,13 +1,15 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 body,
 h1,
 h2,
 h3,
 h4,
-p,
-header,
-section {
+p {
   margin: 0;
-  box-sizing: border-box;
 }
 a {
   text-decoration: none;
@@ -93,10 +95,11 @@ header .nav-link {
   font-size: 14px;
   line-height: 19px;
   color: #00252e;
-  box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.10);
+  box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
 }
 header .nav-link:hover {
-  color: #808E9A;
+  color: #808e9a;
 }
 h1 {
   font-size: 40px;
@@ -123,9 +126,10 @@ header p {
   line-height: 19px;
   color: #ffffff;
   box-shadow: 2px 3px 6px 1px rgba(255, 82, 193, 0.17);
+  transition: 0.5s;
 }
-.pink:hover{
-  background: #FF9ADB;;
+.pink:hover {
+  background: #ff9adb;
 }
 main {
   padding-block: 160px 345px;
@@ -216,12 +220,14 @@ footer {
   color: #ffffff;
   box-shadow: 0px 6px 13px rgba(0, 37, 46, 0.22);
 }
-footer .footer-img {
-  margin-block-end: 32px;
-}
 footer .contain {
   display: flex;
   justify-content: space-between;
+  flex-flow: row wrap;
+}
+footer .contain .image-section {
+  width: 100%;
+  margin-block-end: 32px;
 }
 footer .ul-data {
   display: flex;
@@ -235,7 +241,7 @@ footer .ul-data li {
   max-width: 340px;
   position: relative;
 }
-footer .ul-data li::before{
+footer .ul-data li a::before {
   content: "";
   width: 24px;
   height: 24px;
@@ -245,20 +251,19 @@ footer .ul-data li::before{
   top: 10%;
   left: -40px;
 }
-footer .ul-data .location::before{
+footer .ul-data .location a::before {
   background-image: url(../images/icon-location.svg);
 }
-footer .ul-data .phone::before{
+footer .ul-data .phone a::before {
   background-image: url(../images/icon-phone.svg);
 }
-footer .ul-data .mail::before{
+footer .ul-data .mail a::before {
   background-image: url(../images/icon-email.svg);
 }
 footer .ul-data * {
   color: #fff;
 }
-footer nav{
-  margin-block-start: 56px;
+footer nav {
   display: flex;
   justify-content: flex-start;
   column-gap: 140px;
@@ -270,31 +275,35 @@ footer .ul-links {
   flex-direction: column;
   row-gap: 12px;
 }
-footer .ul-links a{
+footer .ul-links a {
   color: inherit;
+  transition: 0.5s;
 }
-footer .ul-links a:hover{
+footer .ul-links a:hover {
   text-decoration: underline;
 }
-footer .messenger a svg{
+footer .messenger a svg {
   width: 30px;
   height: 30px;
 }
-footer .messenger a svg:hover path{
+footer .messenger a svg path {
+  transition: 0.5s;
+}
+footer .messenger a svg:hover path {
   fill: #ff52c1;
 }
-footer p.copyright.poppins-regular {
+footer p small {
   font-size: 12px;
   line-height: 18px;
   color: #ffffff;
+  line-height: normal;
 }
-footer .messenger{
-  margin-block-start: 56px;
+footer .messenger {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.messenger div{
+.messenger div {
   display: flex;
   column-gap: 12px;
 }
